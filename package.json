@@ -7,6 +7,7 @@
     "dev": "nodemon ./bin/www"
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
@@ -14,6 +15,8 @@
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
     "nodemon": "^1.19.1",
+    "pdfkit": "^0.10.0",
+    "request": "^2.88.0",
     "request-promise": "^4.2.4"
   }
 }
