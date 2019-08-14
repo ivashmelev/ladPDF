@@ -46,9 +46,7 @@ class Scrapping {
       arrRaiting.push(new Object({ word: key, point: raiting[key] }));
     }
 
-    arrRaiting.sort((a, b) => {
-      return b.point - a.point;
-    });
+    arrRaiting.sort((a, b) => b.point - a.point);
 
     return [arrRaiting[0].word, arrRaiting[1].word, arrRaiting[2].word];
   }
@@ -64,6 +62,7 @@ class Scrapping {
     for (let url of arrUrl) {
       topWords.push(await this.topWords(url));
       filePDF.fontSize(12).text(`${url} - ${topWords.join(" | ")}\n`);
+      topWords.shift();
     }
 
     filePDF.end();
